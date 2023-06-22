@@ -311,17 +311,10 @@ export function inventoryControllerTest() {
           payload,
           "/inventory"
         );
-        console.log(
-          "createResponse from decrement Inventory",
-          JSON.stringify(createResponse)
-        );
+
         const response = await client.inventoryTemplate.decreaseInventory(
           createResponse.result,
           { decrementedBy: 1 }
-        );
-        console.log(
-          "response from decrement inventory",
-          JSON.stringify(response)
         );
         assert.equal(response.status.code, 200);
         assert.exists(response);

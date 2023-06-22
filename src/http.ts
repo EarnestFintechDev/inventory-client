@@ -68,7 +68,6 @@ export class ClientHttp implements Routes {
     const response = await this.http.post(`${routeUrl}`, {
       ...data,
     });
-    console.log(response)
     return response.data;
   }
 

@@ -102,7 +102,6 @@ function catalougeControllerTest() {
                                                 return [4 /*yield*/, client_test_1.client.catalougeTemplate.create(payload, '/catalouge')];
                                             case 1:
                                                 response = _a.sent();
-                                                console.log("response from Create Catalouge", response);
                                                 chai_1.assert.equal(response.status.code, 201);
                                                 chai_1.assert.exists(response);
                                                 chai_1.assert.exists(response.result);
